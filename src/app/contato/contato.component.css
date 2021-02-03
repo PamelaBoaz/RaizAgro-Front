@@ -5,3 +5,7 @@ a{
 
     color: #21593b;
   }
+
+  [alert-email]{
+    border-color: red;
+  }
