@@ -55,20 +55,20 @@ export class HomeComponent implements OnInit {
   }
 
   cadastrar(){
-    this.usuario.tipo = this.tipoUsario
+    this.usuario.tipo = 'normal'
     if(this.usuario.email.indexOf('@') == -1){
       this.alertas.showAlertDanger('Email invalido')
     }
 
     if(this.usuario.senha != this.confirmSenha){
-      this.alertas.showAlertDanger('A senhas estao incorretas')
+      this.alertas.showAlertDanger('As senhas estão incorretas')
     }else{
       this.authService.cadastrar(this.usuario).subscribe((resp: usuario) =>{
         this.usuario = resp
 
         this.router.navigate(['/entrar'])
 
-        this.alertas.showAlertSuccess('Usuario cadastrado com sucesso')
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso')
       })
     }
   }
@@ -80,6 +80,7 @@ export class HomeComponent implements OnInit {
       environment.nomeCompleto = this.usuarioLogin.nomeCompleto
       environment.id = this.usuarioLogin.id
       environment.foto = this.usuarioLogin.foto
+      environment.tipo = this.usuarioLogin.tipo
       
       this.usuarioLogin.foto
 

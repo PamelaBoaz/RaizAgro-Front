@@ -1,4 +1,4 @@
-<div class="container mb-5 mt-5">
+<div class="container mb-5 mt-5 text-green-dark">
 
     <div class="row">
         <div class="col-md-12">
@@ -16,13 +16,7 @@
             </div>
 
             <div class="form-group">
-                <label for="usuario">Usuário</label>
-                <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="usuario" id="usuario"
-                    placeholder="Seu usuário">
-            </div>
-
-            <div class="form-group">
-                <label for="usuario">Usuário</label>
+                <label for="usuario">E-mail</label>
                 <input [(ngModel)]='usuario.email' class="form-control" type="text" name="email" id="email"
                     placeholder="Seu E-mail">
             </div>
@@ -46,8 +40,8 @@
             </div>
 
             <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
-                <button type="submit" class="btn btn-success" (click)='atualizar()'>Atualizar</button>
+                <button type="submit" class="btn btn-outline-danger mr-4" routerLink='/inicio'>Cancelar</button>
+                <button type="submit" class="btn btn-outline-success" (click)='atualizar()'>Atualizar</button>
             </div>
 
         </div>
